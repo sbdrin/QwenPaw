@@ -482,7 +482,12 @@
     "helpTitle": "Need Help?",
     "helpPrefix": "See the",
     "helpLink": "installation guide",
-    "helpSuffix": "for detailed setup instructions."
+    "helpSuffix": "for detailed setup instructions.",
+    "pluginsTitle": "Plugins",
+    "pluginsDesc": "Bundled and tool plugins discovered in the QwenPaw repository. Download a .zip package to install manually.",
+    "kindBundle": "Bundle",
+    "kindTool": "Tool",
+    "downloadZip": "Download .zip"
   },
   "releaseNotes": {
     "title": "Release Notes",
