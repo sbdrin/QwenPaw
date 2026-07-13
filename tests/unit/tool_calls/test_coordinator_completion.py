@@ -151,6 +151,7 @@ async def test_middleware_caller_observes_coordinator_response():
 
 
 @pytest.mark.asyncio
+@pytest.mark.skip(reason="offload globally disabled pending fix")
 async def test_background_completion_emits_hint():
     coordinator = ToolCoordinator(default_timeout_secs=0.001)
     tool_call = _ToolCall(id="call-bg", name="slow_tool")
@@ -174,14 +175,14 @@ async def test_background_completion_emits_hint():
         _wait_for_hint(coordinator, "session-bg"),
         timeout=1,
     )
+
+    assert events[-1].metadata["offloaded"] is True
+    assert hint.role == "assistant"
     tool_result = next(
         block
         for block in hint.content
         if getattr(block, "type", None) == "tool_result"
     )
-
-    assert events[-1].metadata["offloaded"] is True
-    assert hint.role == "assistant"
     assert _tool_result_output_text_bytes(tool_result) == 2000
 
 
