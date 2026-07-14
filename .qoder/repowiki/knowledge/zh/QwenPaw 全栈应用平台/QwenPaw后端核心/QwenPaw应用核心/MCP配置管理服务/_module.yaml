@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/app/mcp
+title: MCP配置管理服务
+scope:
+    - src/qwenpaw/app/mcp/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/drivers

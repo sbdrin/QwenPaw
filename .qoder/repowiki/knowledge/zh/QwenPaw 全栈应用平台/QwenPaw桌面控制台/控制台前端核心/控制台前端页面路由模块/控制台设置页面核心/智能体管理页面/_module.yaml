@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: console/frontend_core/page_routes/settings_pages/agents_settings
+title: 智能体管理页面
+scope:
+    - console/src/pages/Settings/Agents/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/app/routers
+title: QwenPaw应用路由核心
+scope:
+    - src/qwenpaw/app/routers/
+source_files: []
+depends_on: []
+related_to:
+    - path: console/frontend_core/api_layer

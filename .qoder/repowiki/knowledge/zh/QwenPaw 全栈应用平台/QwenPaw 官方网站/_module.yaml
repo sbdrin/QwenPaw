@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: website
+title: QwenPaw 官方网站
+scope:
+    - website/
+source_files: []
+depends_on: []
+related_to: []

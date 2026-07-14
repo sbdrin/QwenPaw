@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: backend/agents/agent_core
+title: 智能体核心功能模块
+scope:
+    - src/qwenpaw/agents/acp/
+    - src/qwenpaw/agents/react_agent.py
+    - src/qwenpaw/agents/command_handler.py
+    - src/qwenpaw/agents/model_factory.py
+    - src/qwenpaw/agents/offloader.py
+    - src/qwenpaw/agents/routing_chat_model.py
+source_files: []
+depends_on: []
+related_to: []

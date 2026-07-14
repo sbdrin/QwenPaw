@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: console/frontend_core/page_routes/agent_pages/agent_workspace
+title: 智能体工作空间管理
+scope:
+    - console/src/pages/Agent/Workspace/
+source_files: []
+depends_on: []
+related_to: []

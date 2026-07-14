@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/app/channels
+title: 多渠道消息处理与队列管理
+scope:
+    - src/qwenpaw/app/channels/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/app/workspace

@@ -1,0 +1,804 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: main
+nodes_managed: true
+exported_at: "2026-07-14T10:29:37Z"
+modules:
+    "":
+        dir_name: QwenPaw 全栈应用平台
+        title: QwenPaw 全栈应用平台
+        scope:
+            - README.md
+            - README_ja.md
+            - README_ru.md
+            - README_vi.md
+            - README_zh.md
+            - CONTRIBUTING.md
+            - SECURITY.md
+            - Makefile
+            - pyproject.toml
+            - setup.py
+            - .dockerignore
+            - .flake8
+            - .gitattributes
+            - .gitignore
+            - .pre-commit-config.yaml
+            - docker-compose.yml
+            - .github/
+            - .python-version
+            - CONTRIBUTING_zh.md
+            - LICENSE
+        source_files: []
+        children:
+            - backend
+            - console
+            - deploy
+            - e2e
+            - plugins
+            - scripts
+            - tests
+            - website
+        depends_on: []
+        related_to: []
+    backend:
+        dir_name: QwenPaw后端核心
+        title: QwenPaw后端核心
+        scope:
+            - src/qwenpaw/
+        source_files: []
+        children:
+            - backend/agents
+            - backend/app
+            - backend/drivers
+            - backend/providers
+            - backend/runtime
+        depends_on: []
+        related_to:
+            - path: console/tauri_backend
+    backend/agents:
+        dir_name: QwenPaw智能体系统
+        title: QwenPaw智能体系统
+        scope:
+            - src/qwenpaw/agents/
+        source_files: []
+        children:
+            - backend/agents/agent_core
+            - backend/agents/context_management
+            - backend/agents/memory_management
+            - backend/agents/skill_system
+            - backend/agents/tools
+        depends_on: []
+        related_to:
+            - path: backend/app
+            - path: backend/providers
+    backend/agents/agent_core:
+        dir_name: 智能体核心功能模块
+        title: 智能体核心功能模块
+        scope:
+            - src/qwenpaw/agents/acp/
+            - src/qwenpaw/agents/react_agent.py
+            - src/qwenpaw/agents/command_handler.py
+            - src/qwenpaw/agents/model_factory.py
+            - src/qwenpaw/agents/offloader.py
+            - src/qwenpaw/agents/routing_chat_model.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/agents/context_management:
+        dir_name: 上下文管理器
+        title: 上下文管理器
+        scope:
+            - src/qwenpaw/agents/context/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/agents/memory_management:
+        dir_name: 智能体记忆管理
+        title: 智能体记忆管理
+        scope:
+            - src/qwenpaw/agents/memory/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/agents/skill_system:
+        dir_name: 技能系统管理
+        title: 技能系统管理
+        scope:
+            - src/qwenpaw/agents/skill_system/
+            - src/qwenpaw/agents/skills/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/routers/skills_tools
+    backend/agents/tools:
+        dir_name: 内置工具与实用程序
+        title: 内置工具与实用程序
+        scope:
+            - src/qwenpaw/agents/tools/
+            - src/qwenpaw/agents/utils/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/app:
+        dir_name: QwenPaw应用核心
+        title: QwenPaw应用核心
+        scope:
+            - src/qwenpaw/app/
+        source_files: []
+        children:
+            - backend/app/app_services
+            - backend/app/approvals
+            - backend/app/channels
+            - backend/app/chats
+            - backend/app/crons
+            - backend/app/mcp
+            - backend/app/routers
+            - backend/app/workspace
+        depends_on: []
+        related_to:
+            - path: backend/agents
+            - path: backend/runtime
+    backend/app/app_services:
+        dir_name: 应用服务管理器
+        title: 应用服务管理器
+        scope:
+            - src/qwenpaw/app/app_services/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/app/approvals:
+        dir_name: 审批服务管理
+        title: 审批服务管理
+        scope:
+            - src/qwenpaw/app/approvals/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: console/frontend_core/page_routes/inbox_page
+    backend/app/channels:
+        dir_name: 多渠道消息处理与队列管理
+        title: 多渠道消息处理与队列管理
+        scope:
+            - src/qwenpaw/app/channels/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/workspace
+    backend/app/chats:
+        dir_name: 聊天管理模块
+        title: 聊天管理模块
+        scope:
+            - src/qwenpaw/app/chats/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: console/frontend_core/page_routes/chat_page
+    backend/app/crons:
+        dir_name: 定时任务与心跳管理
+        title: 定时任务与心跳管理
+        scope:
+            - src/qwenpaw/app/crons/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: console/frontend_core/page_routes/control_pages/cron_jobs
+    backend/app/mcp:
+        dir_name: MCP配置管理服务
+        title: MCP配置管理服务
+        scope:
+            - src/qwenpaw/app/mcp/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/drivers
+    backend/app/routers:
+        dir_name: QwenPaw应用路由核心
+        title: QwenPaw应用路由核心
+        scope:
+            - src/qwenpaw/app/routers/
+        source_files: []
+        children:
+            - backend/app/routers/agent_management
+            - backend/app/routers/authentication_security
+            - backend/app/routers/communication_channels
+            - backend/app/routers/development_features
+            - backend/app/routers/market_plugins
+            - backend/app/routers/mcp_integration
+            - backend/app/routers/skills_tools
+            - backend/app/routers/system_config
+            - backend/app/routers/utilities
+            - backend/app/routers/workspace_console
+        depends_on: []
+        related_to:
+            - path: console/frontend_core/api_layer
+    backend/app/routers/agent_management:
+        dir_name: 智能体管理API
+        title: 智能体管理API
+        scope:
+            - src/qwenpaw/app/routers/agents.py
+            - src/qwenpaw/app/routers/agent_scoped.py
+            - src/qwenpaw/app/routers/agent_stats.py
+            - src/qwenpaw/app/routers/agent_status.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/app/routers/authentication_security:
+        dir_name: 认证与访问控制
+        title: 认证与访问控制
+        scope:
+            - src/qwenpaw/app/routers/auth.py
+            - src/qwenpaw/app/routers/access_control.py
+            - src/qwenpaw/app/routers/approval.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/app/routers/communication_channels:
+        dir_name: 通信渠道管理模块
+        title: 通信渠道管理模块
+        scope:
+            - src/qwenpaw/app/routers/messages.py
+            - src/qwenpaw/app/routers/git.py
+            - src/qwenpaw/app/routers/voice.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: console/frontend_core/page_routes/control_pages/channels
+    backend/app/routers/development_features:
+        dir_name: 开发模式功能管理
+        title: 开发模式功能管理
+        scope:
+            - src/qwenpaw/app/routers/coding_mode.py
+            - src/qwenpaw/app/routers/coding_project.py
+            - src/qwenpaw/app/routers/loops.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/app/routers/market_plugins:
+        dir_name: 插件市场与前端集成
+        title: 插件市场与前端集成
+        scope:
+            - src/qwenpaw/app/routers/market.py
+            - src/qwenpaw/app/routers/plugins.py
+            - src/qwenpaw/app/routers/frontend_plugin.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/app/routers/mcp_integration:
+        dir_name: MCP集成与OAuth认证管理
+        title: MCP集成与OAuth认证管理
+        scope:
+            - src/qwenpaw/app/routers/mcp.py
+            - src/qwenpaw/app/routers/mcp_oauth.py
+            - src/qwenpaw/app/routers/provider_oauth.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: console/frontend_core/page_routes/agent_pages/agent_mcp
+    backend/app/routers/skills_tools:
+        dir_name: 技能与工具管理模块
+        title: 技能与工具管理模块
+        scope:
+            - src/qwenpaw/app/routers/skills.py
+            - src/qwenpaw/app/routers/skills_stream.py
+            - src/qwenpaw/app/routers/tools.py
+            - src/qwenpaw/app/routers/tool_calls.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/agents/skill_system
+            - path: console/frontend_core/page_routes/agent_pages/agent_tools
+    backend/app/routers/system_config:
+        dir_name: 系统配置与环境管理
+        title: 系统配置与环境管理
+        scope:
+            - src/qwenpaw/app/routers/config.py
+            - src/qwenpaw/app/routers/settings.py
+            - src/qwenpaw/app/routers/envs.py
+            - src/qwenpaw/app/routers/token_usage.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/app/routers/utilities:
+        dir_name: 备份、分叉和健康检查路由模块
+        title: 备份、分叉和健康检查路由模块
+        scope:
+            - src/qwenpaw/app/routers/backup.py
+            - src/qwenpaw/app/routers/fork.py
+            - src/qwenpaw/app/routers/healthz.py
+            - src/qwenpaw/app/routers/_backup_helpers.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/app/routers/workspace_console:
+        dir_name: 工作区与控制台路由模块
+        title: 工作区与控制台路由模块
+        scope:
+            - src/qwenpaw/app/routers/workspace.py
+            - src/qwenpaw/app/routers/console.py
+            - src/qwenpaw/app/routers/files.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/app/workspace:
+        dir_name: 工作区管理模块
+        title: 工作区管理模块
+        scope:
+            - src/qwenpaw/app/workspace/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/channels
+    backend/drivers:
+        dir_name: 驱动程序管理子系统
+        title: 驱动程序管理子系统
+        scope:
+            - src/qwenpaw/drivers/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/mcp
+    backend/providers:
+        dir_name: AI模型提供商管理
+        title: AI模型提供商管理
+        scope:
+            - src/qwenpaw/providers/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/agents
+            - path: console/frontend_core/page_routes/settings_pages/models_settings
+    backend/runtime:
+        dir_name: 运行时执行与命令管理
+        title: 运行时执行与命令管理
+        scope:
+            - src/qwenpaw/runtime/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app
+    console:
+        dir_name: QwenPaw桌面控制台
+        title: QwenPaw桌面控制台
+        scope:
+            - console/
+        source_files: []
+        children:
+            - console/frontend_core
+            - console/tauri_backend
+        depends_on: []
+        related_to: []
+    console/frontend_core:
+        dir_name: 控制台前端核心
+        title: 控制台前端核心
+        scope:
+            - console/src/
+        source_files: []
+        children:
+            - console/frontend_core/api_layer
+            - console/frontend_core/assets_and_utils
+            - console/frontend_core/frontend_infrastructure
+            - console/frontend_core/page_routes
+            - console/frontend_core/ui_components
+        depends_on: []
+        related_to: []
+    console/frontend_core/api_layer:
+        dir_name: 前端API层
+        title: 前端API层
+        scope:
+            - console/src/api/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/routers
+    console/frontend_core/assets_and_utils:
+        dir_name: 前端常量、工具与布局组件
+        title: 前端常量、工具与布局组件
+        scope:
+            - console/src/constants/
+            - console/src/locales/
+            - console/src/styles/
+            - console/src/utils/
+            - console/src/layouts/
+            - console/src/test/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/frontend_infrastructure:
+        dir_name: 前端基础设施
+        title: 前端基础设施
+        scope:
+            - console/src/stores/
+            - console/src/hooks/
+            - console/src/contexts/
+            - console/src/plugins/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes:
+        dir_name: 控制台前端页面路由模块
+        title: 控制台前端页面路由模块
+        scope:
+            - console/src/pages/
+        source_files: []
+        children:
+            - console/frontend_core/page_routes/agent_pages
+            - console/frontend_core/page_routes/chat_page
+            - console/frontend_core/page_routes/coding_page
+            - console/frontend_core/page_routes/control_pages
+            - console/frontend_core/page_routes/inbox_page
+            - console/frontend_core/page_routes/settings_pages
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/agent_pages:
+        dir_name: 智能体管理平台
+        title: 智能体管理平台
+        scope:
+            - console/src/pages/Agent/
+        source_files: []
+        children:
+            - console/frontend_core/page_routes/agent_pages/agent_acp
+            - console/frontend_core/page_routes/agent_pages/agent_config
+            - console/frontend_core/page_routes/agent_pages/agent_mcp
+            - console/frontend_core/page_routes/agent_pages/agent_skills
+            - console/frontend_core/page_routes/agent_pages/agent_tools
+            - console/frontend_core/page_routes/agent_pages/agent_workspace
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/agent_pages/agent_acp:
+        dir_name: 外部代码执行器管理页面
+        title: 外部代码执行器管理页面
+        scope:
+            - console/src/pages/Agent/ACP/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/agent_pages/agent_config:
+        dir_name: 智能体配置管理页面
+        title: 智能体配置管理页面
+        scope:
+            - console/src/pages/Agent/Config/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/agent_pages/agent_mcp:
+        dir_name: MCP客户端管理页面
+        title: MCP客户端管理页面
+        scope:
+            - console/src/pages/Agent/MCP/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/routers/mcp_integration
+    console/frontend_core/page_routes/agent_pages/agent_skills:
+        dir_name: 智能体技能管理页面
+        title: 智能体技能管理页面
+        scope:
+            - console/src/pages/Agent/Skills/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/agent_pages/agent_tools:
+        dir_name: 智能体工具管理页面
+        title: 智能体工具管理页面
+        scope:
+            - console/src/pages/Agent/Tools/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/routers/skills_tools
+    console/frontend_core/page_routes/agent_pages/agent_workspace:
+        dir_name: 智能体工作空间管理
+        title: 智能体工作空间管理
+        scope:
+            - console/src/pages/Agent/Workspace/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/chat_page:
+        dir_name: 聊天页面核心功能模块
+        title: 聊天页面核心功能模块
+        scope:
+            - console/src/pages/Chat/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/chats
+    console/frontend_core/page_routes/coding_page:
+        dir_name: 代码编辑器页面
+        title: 代码编辑器页面
+        scope:
+            - console/src/pages/Coding/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/control_pages:
+        dir_name: 控制台核心管理页面
+        title: 控制台核心管理页面
+        scope:
+            - console/src/pages/Control/
+        source_files: []
+        children:
+            - console/frontend_core/page_routes/control_pages/channels
+            - console/frontend_core/page_routes/control_pages/cron_jobs
+            - console/frontend_core/page_routes/control_pages/heartbeat
+            - console/frontend_core/page_routes/control_pages/sessions
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/control_pages/channels:
+        dir_name: 渠道配置管理页面
+        title: 渠道配置管理页面
+        scope:
+            - console/src/pages/Control/Channels/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/routers/communication_channels
+    console/frontend_core/page_routes/control_pages/cron_jobs:
+        dir_name: 定时任务管理页面
+        title: 定时任务管理页面
+        scope:
+            - console/src/pages/Control/CronJobs/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/crons
+    console/frontend_core/page_routes/control_pages/heartbeat:
+        dir_name: 心跳配置页面
+        title: 心跳配置页面
+        scope:
+            - console/src/pages/Control/Heartbeat/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/control_pages/sessions:
+        dir_name: 会话管理页面
+        title: 会话管理页面
+        scope:
+            - console/src/pages/Control/Sessions/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/inbox_page:
+        dir_name: 收件箱页面
+        title: 收件箱页面
+        scope:
+            - console/src/pages/Inbox/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/app/approvals
+    console/frontend_core/page_routes/settings_pages:
+        dir_name: 控制台设置页面核心
+        title: 控制台设置页面核心
+        scope:
+            - console/src/pages/Settings/
+        source_files: []
+        children:
+            - console/frontend_core/page_routes/settings_pages/agent_stats_settings
+            - console/frontend_core/page_routes/settings_pages/agents_settings
+            - console/frontend_core/page_routes/settings_pages/backups_settings
+            - console/frontend_core/page_routes/settings_pages/environments_settings
+            - console/frontend_core/page_routes/settings_pages/market_settings
+            - console/frontend_core/page_routes/settings_pages/models_settings
+            - console/frontend_core/page_routes/settings_pages/plugin_manager_settings
+            - console/frontend_core/page_routes/settings_pages/security_settings
+            - console/frontend_core/page_routes/settings_pages/skill_pool_settings
+            - console/frontend_core/page_routes/settings_pages/token_usage_settings
+            - console/frontend_core/page_routes/settings_pages/voice_transcription_settings
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/agent_stats_settings:
+        dir_name: 智能体统计设置页面
+        title: 智能体统计设置页面
+        scope:
+            - console/src/pages/Settings/AgentStats/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/agents_settings:
+        dir_name: 智能体管理页面
+        title: 智能体管理页面
+        scope:
+            - console/src/pages/Settings/Agents/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/backups_settings:
+        dir_name: 备份管理页面
+        title: 备份管理页面
+        scope:
+            - console/src/pages/Settings/Backups/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/environments_settings:
+        dir_name: 环境变量管理页面
+        title: 环境变量管理页面
+        scope:
+            - console/src/pages/Settings/Environments/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/market_settings:
+        dir_name: 市场设置页面
+        title: 市场设置页面
+        scope:
+            - console/src/pages/Settings/Market/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/models_settings:
+        dir_name: 模型提供商配置管理
+        title: 模型提供商配置管理
+        scope:
+            - console/src/pages/Settings/Models/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/providers
+    console/frontend_core/page_routes/settings_pages/plugin_manager_settings:
+        dir_name: 插件管理页面
+        title: 插件管理页面
+        scope:
+            - console/src/pages/Settings/PluginManager/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/security_settings:
+        dir_name: 安全设置页面
+        title: 安全设置页面
+        scope:
+            - console/src/pages/Settings/Security/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/skill_pool_settings:
+        dir_name: 技能池管理页面
+        title: 技能池管理页面
+        scope:
+            - console/src/pages/Settings/SkillPool/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/token_usage_settings:
+        dir_name: 令牌使用情况分析页面
+        title: 令牌使用情况分析页面
+        scope:
+            - console/src/pages/Settings/TokenUsage/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/page_routes/settings_pages/voice_transcription_settings:
+        dir_name: 语音转录设置页面
+        title: 语音转录设置页面
+        scope:
+            - console/src/pages/Settings/VoiceTranscription/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/frontend_core/ui_components:
+        dir_name: UI组件库
+        title: UI组件库
+        scope:
+            - console/src/components/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    console/tauri_backend:
+        dir_name: Tauri桌面应用后端管理
+        title: Tauri桌面应用后端管理
+        scope:
+            - console/src-tauri/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend
+    deploy:
+        dir_name: 容器化部署配置
+        title: 容器化部署配置
+        scope:
+            - deploy/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    e2e:
+        dir_name: 端到端测试框架
+        title: 端到端测试框架
+        scope:
+            - e2e/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    plugins:
+        dir_name: 插件系统
+        title: 插件系统
+        scope:
+            - plugins/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    scripts:
+        dir_name: 构建与打包脚本模块
+        title: 构建与打包脚本模块
+        scope:
+            - scripts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    tests:
+        dir_name: 测试框架与合约验证
+        title: 测试框架与合约验证
+        scope:
+            - tests/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    website:
+        dir_name: QwenPaw 官方网站
+        title: QwenPaw 官方网站
+        scope:
+            - website/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

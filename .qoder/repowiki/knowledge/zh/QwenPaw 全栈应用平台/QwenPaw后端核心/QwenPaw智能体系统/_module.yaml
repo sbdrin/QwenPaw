@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/agents
+title: QwenPaw智能体系统
+scope:
+    - src/qwenpaw/agents/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/app
+    - path: backend/providers

@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: console/frontend_core/frontend_infrastructure
+title: 前端基础设施
+scope:
+    - console/src/stores/
+    - console/src/hooks/
+    - console/src/contexts/
+    - console/src/plugins/
+source_files: []
+depends_on: []
+related_to: []

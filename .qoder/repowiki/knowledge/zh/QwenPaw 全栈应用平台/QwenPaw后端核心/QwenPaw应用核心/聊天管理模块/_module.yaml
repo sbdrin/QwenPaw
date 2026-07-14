@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/app/chats
+title: 聊天管理模块
+scope:
+    - src/qwenpaw/app/chats/
+source_files: []
+depends_on: []
+related_to:
+    - path: console/frontend_core/page_routes/chat_page

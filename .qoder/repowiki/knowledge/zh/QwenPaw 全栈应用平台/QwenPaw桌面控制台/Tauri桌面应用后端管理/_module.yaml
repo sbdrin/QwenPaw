@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: console/tauri_backend
+title: Tauri桌面应用后端管理
+scope:
+    - console/src-tauri/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend

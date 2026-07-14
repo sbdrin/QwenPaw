@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/app/routers/system_config
+title: 系统配置与环境管理
+scope:
+    - src/qwenpaw/app/routers/config.py
+    - src/qwenpaw/app/routers/settings.py
+    - src/qwenpaw/app/routers/envs.py
+    - src/qwenpaw/app/routers/token_usage.py
+source_files: []
+depends_on: []
+related_to: []

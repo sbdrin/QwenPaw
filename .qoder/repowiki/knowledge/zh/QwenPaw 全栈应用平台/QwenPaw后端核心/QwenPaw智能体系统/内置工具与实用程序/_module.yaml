@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/agents/tools
+title: 内置工具与实用程序
+scope:
+    - src/qwenpaw/agents/tools/
+    - src/qwenpaw/agents/utils/
+source_files: []
+depends_on: []
+related_to: []

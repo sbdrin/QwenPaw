@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: console/frontend_core/page_routes/settings_pages/token_usage_settings
+title: 令牌使用情况分析页面
+scope:
+    - console/src/pages/Settings/TokenUsage/
+source_files: []
+depends_on: []
+related_to: []

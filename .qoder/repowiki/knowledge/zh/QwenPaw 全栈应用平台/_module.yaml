@@ -1,0 +1,27 @@
+schema_version: 1
+module_path: ""
+title: QwenPaw 全栈应用平台
+scope:
+    - README.md
+    - README_ja.md
+    - README_ru.md
+    - README_vi.md
+    - README_zh.md
+    - CONTRIBUTING.md
+    - SECURITY.md
+    - Makefile
+    - pyproject.toml
+    - setup.py
+    - .dockerignore
+    - .flake8
+    - .gitattributes
+    - .gitignore
+    - .pre-commit-config.yaml
+    - docker-compose.yml
+    - .github/
+    - .python-version
+    - CONTRIBUTING_zh.md
+    - LICENSE
+source_files: []
+depends_on: []
+related_to: []

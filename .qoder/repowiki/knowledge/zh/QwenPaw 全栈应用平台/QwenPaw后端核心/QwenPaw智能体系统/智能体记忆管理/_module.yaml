@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: backend/agents/memory_management
+title: 智能体记忆管理
+scope:
+    - src/qwenpaw/agents/memory/
+source_files: []
+depends_on: []
+related_to: []

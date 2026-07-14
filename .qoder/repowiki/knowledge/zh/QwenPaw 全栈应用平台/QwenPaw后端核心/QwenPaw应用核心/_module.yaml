@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/app
+title: QwenPaw应用核心
+scope:
+    - src/qwenpaw/app/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/agents
+    - path: backend/runtime

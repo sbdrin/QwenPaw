@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/app/routers/communication_channels
+title: 通信渠道管理模块
+scope:
+    - src/qwenpaw/app/routers/messages.py
+    - src/qwenpaw/app/routers/git.py
+    - src/qwenpaw/app/routers/voice.py
+source_files: []
+depends_on: []
+related_to:
+    - path: console/frontend_core/page_routes/control_pages/channels

@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/agents/skill_system
+title: 技能系统管理
+scope:
+    - src/qwenpaw/agents/skill_system/
+    - src/qwenpaw/agents/skills/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/app/routers/skills_tools

@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/app/routers/market_plugins
+title: 插件市场与前端集成
+scope:
+    - src/qwenpaw/app/routers/market.py
+    - src/qwenpaw/app/routers/plugins.py
+    - src/qwenpaw/app/routers/frontend_plugin.py
+source_files: []
+depends_on: []
+related_to: []

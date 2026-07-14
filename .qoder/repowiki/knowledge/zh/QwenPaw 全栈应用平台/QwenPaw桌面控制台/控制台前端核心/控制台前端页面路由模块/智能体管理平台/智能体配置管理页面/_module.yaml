@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: console/frontend_core/page_routes/agent_pages/agent_config
+title: 智能体配置管理页面
+scope:
+    - console/src/pages/Agent/Config/
+source_files: []
+depends_on: []
+related_to: []

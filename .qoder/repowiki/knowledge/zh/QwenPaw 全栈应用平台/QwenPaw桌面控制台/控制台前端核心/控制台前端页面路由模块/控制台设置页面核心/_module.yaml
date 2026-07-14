@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: console/frontend_core/page_routes/settings_pages
+title: 控制台设置页面核心
+scope:
+    - console/src/pages/Settings/
+source_files: []
+depends_on: []
+related_to: []

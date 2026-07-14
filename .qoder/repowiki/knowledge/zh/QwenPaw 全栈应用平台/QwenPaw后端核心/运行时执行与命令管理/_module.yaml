@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/runtime
+title: 运行时执行与命令管理
+scope:
+    - src/qwenpaw/runtime/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/app

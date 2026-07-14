@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: backend/app/routers/skills_tools
+title: 技能与工具管理模块
+scope:
+    - src/qwenpaw/app/routers/skills.py
+    - src/qwenpaw/app/routers/skills_stream.py
+    - src/qwenpaw/app/routers/tools.py
+    - src/qwenpaw/app/routers/tool_calls.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/agents/skill_system
+    - path: console/frontend_core/page_routes/agent_pages/agent_tools

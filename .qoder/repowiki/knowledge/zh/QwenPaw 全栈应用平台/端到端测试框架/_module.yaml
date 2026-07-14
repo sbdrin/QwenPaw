@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: e2e
+title: 端到端测试框架
+scope:
+    - e2e/
+source_files: []
+depends_on: []
+related_to: []

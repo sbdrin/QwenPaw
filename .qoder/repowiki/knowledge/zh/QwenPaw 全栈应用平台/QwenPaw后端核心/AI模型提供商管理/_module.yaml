@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/providers
+title: AI模型提供商管理
+scope:
+    - src/qwenpaw/providers/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/agents
+    - path: console/frontend_core/page_routes/settings_pages/models_settings

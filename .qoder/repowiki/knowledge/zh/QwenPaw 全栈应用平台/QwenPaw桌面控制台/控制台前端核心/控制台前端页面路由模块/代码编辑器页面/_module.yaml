@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: console/frontend_core/page_routes/coding_page
+title: 代码编辑器页面
+scope:
+    - console/src/pages/Coding/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/app/routers/agent_management
+title: 智能体管理API
+scope:
+    - src/qwenpaw/app/routers/agents.py
+    - src/qwenpaw/app/routers/agent_scoped.py
+    - src/qwenpaw/app/routers/agent_stats.py
+    - src/qwenpaw/app/routers/agent_status.py
+source_files: []
+depends_on: []
+related_to: []

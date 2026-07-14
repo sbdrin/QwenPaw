@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: console/frontend_core/assets_and_utils
+title: 前端常量、工具与布局组件
+scope:
+    - console/src/constants/
+    - console/src/locales/
+    - console/src/styles/
+    - console/src/utils/
+    - console/src/layouts/
+    - console/src/test/
+source_files: []
+depends_on: []
+related_to: []

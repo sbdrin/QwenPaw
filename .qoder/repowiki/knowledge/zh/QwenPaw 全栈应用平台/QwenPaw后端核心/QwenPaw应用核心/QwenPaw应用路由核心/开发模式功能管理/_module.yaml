@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/app/routers/development_features
+title: 开发模式功能管理
+scope:
+    - src/qwenpaw/app/routers/coding_mode.py
+    - src/qwenpaw/app/routers/coding_project.py
+    - src/qwenpaw/app/routers/loops.py
+source_files: []
+depends_on: []
+related_to: []

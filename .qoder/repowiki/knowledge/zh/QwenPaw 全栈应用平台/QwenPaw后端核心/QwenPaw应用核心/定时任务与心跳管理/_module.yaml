@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/app/crons
+title: 定时任务与心跳管理
+scope:
+    - src/qwenpaw/app/crons/
+source_files: []
+depends_on: []
+related_to:
+    - path: console/frontend_core/page_routes/control_pages/cron_jobs

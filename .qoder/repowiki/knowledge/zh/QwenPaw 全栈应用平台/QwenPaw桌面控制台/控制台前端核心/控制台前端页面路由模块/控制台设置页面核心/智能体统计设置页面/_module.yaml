@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: console/frontend_core/page_routes/settings_pages/agent_stats_settings
+title: 智能体统计设置页面
+scope:
+    - console/src/pages/Settings/AgentStats/
+source_files: []
+depends_on: []
+related_to: []

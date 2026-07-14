@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: console/frontend_core/page_routes/settings_pages/skill_pool_settings
+title: 技能池管理页面
+scope:
+    - console/src/pages/Settings/SkillPool/
+source_files: []
+depends_on: []
+related_to: []

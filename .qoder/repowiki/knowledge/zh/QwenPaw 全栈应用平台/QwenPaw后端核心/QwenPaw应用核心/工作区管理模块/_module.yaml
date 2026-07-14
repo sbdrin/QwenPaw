@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/app/workspace
+title: 工作区管理模块
+scope:
+    - src/qwenpaw/app/workspace/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/app/channels

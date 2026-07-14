@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/app/routers/authentication_security
+title: 认证与访问控制
+scope:
+    - src/qwenpaw/app/routers/auth.py
+    - src/qwenpaw/app/routers/access_control.py
+    - src/qwenpaw/app/routers/approval.py
+source_files: []
+depends_on: []
+related_to: []

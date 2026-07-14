@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/drivers
+title: 驱动程序管理子系统
+scope:
+    - src/qwenpaw/drivers/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/app/mcp
