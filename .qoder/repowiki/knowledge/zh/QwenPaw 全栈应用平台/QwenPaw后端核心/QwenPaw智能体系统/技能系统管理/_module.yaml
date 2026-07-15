@@ -7,4 +7,5 @@ scope:
 source_files: []
 depends_on: []
 related_to:
-    - path: backend/app/routers/skills_tools
+    - path: console/frontend_core/page_routes/agent_pages/agent_skills
+    - path: console/frontend_core/page_routes/settings_pages/skill_pool_settings

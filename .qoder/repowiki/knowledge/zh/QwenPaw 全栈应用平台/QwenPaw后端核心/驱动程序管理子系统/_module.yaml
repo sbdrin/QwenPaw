@@ -5,5 +5,4 @@ scope:
     - src/qwenpaw/drivers/
 source_files: []
 depends_on: []
-related_to:
-    - path: backend/app/mcp
+related_to: []

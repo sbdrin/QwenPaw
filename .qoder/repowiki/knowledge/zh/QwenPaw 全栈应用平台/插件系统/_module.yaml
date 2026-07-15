@@ -5,4 +5,5 @@ scope:
     - plugins/
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: console/frontend_core/page_routes/settings_pages/plugin_manager_settings

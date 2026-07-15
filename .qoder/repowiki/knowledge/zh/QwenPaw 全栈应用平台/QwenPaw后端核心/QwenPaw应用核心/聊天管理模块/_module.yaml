@@ -7,3 +7,4 @@ source_files: []
 depends_on: []
 related_to:
     - path: console/frontend_core/page_routes/chat_page
+    - path: console/frontend_core/page_routes/control_pages/sessions

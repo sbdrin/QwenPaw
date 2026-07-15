@@ -5,6 +5,4 @@ scope:
     - src/qwenpaw/app/
 source_files: []
 depends_on: []
-related_to:
-    - path: backend/agents
-    - path: backend/runtime
+related_to: []

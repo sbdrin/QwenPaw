@@ -6,4 +6,5 @@ scope:
     - src/qwenpaw/agents/utils/
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: console/frontend_core/page_routes/agent_pages/agent_tools

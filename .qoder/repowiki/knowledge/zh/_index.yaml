@@ -3,7 +3,7 @@ schema_version: 1
 locale: zh-CN
 branch: main
 nodes_managed: true
-exported_at: "2026-07-14T10:29:37Z"
+exported_at: "2026-07-15T01:10:36Z"
 modules:
     "":
         dir_name: QwenPaw 全栈应用平台
@@ -54,8 +54,7 @@ modules:
             - backend/providers
             - backend/runtime
         depends_on: []
-        related_to:
-            - path: console/tauri_backend
+        related_to: []
     backend/agents:
         dir_name: QwenPaw智能体系统
         title: QwenPaw智能体系统
@@ -69,9 +68,7 @@ modules:
             - backend/agents/skill_system
             - backend/agents/tools
         depends_on: []
-        related_to:
-            - path: backend/app
-            - path: backend/providers
+        related_to: []
     backend/agents/agent_core:
         dir_name: 智能体核心功能模块
         title: 智能体核心功能模块
@@ -85,7 +82,9 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: console/frontend_core/page_routes/agent_pages/agent_acp
+            - path: console/frontend_core/page_routes/agent_pages/agent_config
     backend/agents/context_management:
         dir_name: 上下文管理器
         title: 上下文管理器
@@ -114,7 +113,8 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: backend/app/routers/skills_tools
+            - path: console/frontend_core/page_routes/agent_pages/agent_skills
+            - path: console/frontend_core/page_routes/settings_pages/skill_pool_settings
     backend/agents/tools:
         dir_name: 内置工具与实用程序
         title: 内置工具与实用程序
@@ -124,7 +124,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: console/frontend_core/page_routes/agent_pages/agent_tools
     backend/app:
         dir_name: QwenPaw应用核心
         title: QwenPaw应用核心
@@ -141,9 +142,7 @@ modules:
             - backend/app/routers
             - backend/app/workspace
         depends_on: []
-        related_to:
-            - path: backend/agents
-            - path: backend/runtime
+        related_to: []
     backend/app/app_services:
         dir_name: 应用服务管理器
         title: 应用服务管理器
@@ -172,7 +171,7 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: backend/app/workspace
+            - path: console/frontend_core/page_routes/control_pages/channels
     backend/app/chats:
         dir_name: 聊天管理模块
         title: 聊天管理模块
@@ -183,6 +182,7 @@ modules:
         depends_on: []
         related_to:
             - path: console/frontend_core/page_routes/chat_page
+            - path: console/frontend_core/page_routes/control_pages/sessions
     backend/app/crons:
         dir_name: 定时任务与心跳管理
         title: 定时任务与心跳管理
@@ -193,6 +193,7 @@ modules:
         depends_on: []
         related_to:
             - path: console/frontend_core/page_routes/control_pages/cron_jobs
+            - path: console/frontend_core/page_routes/control_pages/heartbeat
     backend/app/mcp:
         dir_name: MCP配置管理服务
         title: MCP配置管理服务
@@ -202,7 +203,7 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: backend/drivers
+            - path: console/frontend_core/page_routes/agent_pages/agent_mcp
     backend/app/routers:
         dir_name: QwenPaw应用路由核心
         title: QwenPaw应用路由核心
@@ -234,7 +235,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: console/frontend_core/page_routes/settings_pages/agents_settings
     backend/app/routers/authentication_security:
         dir_name: 认证与访问控制
         title: 认证与访问控制
@@ -245,7 +247,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: console/frontend_core/page_routes/settings_pages/security_settings
     backend/app/routers/communication_channels:
         dir_name: 通信渠道管理模块
         title: 通信渠道管理模块
@@ -257,7 +260,7 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: console/frontend_core/page_routes/control_pages/channels
+            - path: console/frontend_core/page_routes/settings_pages/voice_transcription_settings
     backend/app/routers/development_features:
         dir_name: 开发模式功能管理
         title: 开发模式功能管理
@@ -268,7 +271,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: console/frontend_core/page_routes/coding_page
     backend/app/routers/market_plugins:
         dir_name: 插件市场与前端集成
         title: 插件市场与前端集成
@@ -279,7 +283,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: console/frontend_core/page_routes/settings_pages/market_settings
     backend/app/routers/mcp_integration:
         dir_name: MCP集成与OAuth认证管理
         title: MCP集成与OAuth认证管理
@@ -290,8 +295,7 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: console/frontend_core/page_routes/agent_pages/agent_mcp
+        related_to: []
     backend/app/routers/skills_tools:
         dir_name: 技能与工具管理模块
         title: 技能与工具管理模块
@@ -303,9 +307,7 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: backend/agents/skill_system
-            - path: console/frontend_core/page_routes/agent_pages/agent_tools
+        related_to: []
     backend/app/routers/system_config:
         dir_name: 系统配置与环境管理
         title: 系统配置与环境管理
@@ -317,7 +319,9 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: console/frontend_core/page_routes/settings_pages/environments_settings
+            - path: console/frontend_core/page_routes/settings_pages/token_usage_settings
     backend/app/routers/utilities:
         dir_name: 备份、分叉和健康检查路由模块
         title: 备份、分叉和健康检查路由模块
@@ -329,7 +333,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: console/frontend_core/page_routes/settings_pages/backups_settings
     backend/app/routers/workspace_console:
         dir_name: 工作区与控制台路由模块
         title: 工作区与控制台路由模块
@@ -350,7 +355,7 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: backend/app/channels
+            - path: console/frontend_core/page_routes/agent_pages/agent_workspace
     backend/drivers:
         dir_name: 驱动程序管理子系统
         title: 驱动程序管理子系统
@@ -359,8 +364,7 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: backend/app/mcp
+        related_to: []
     backend/providers:
         dir_name: AI模型提供商管理
         title: AI模型提供商管理
@@ -370,7 +374,6 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: backend/agents
             - path: console/frontend_core/page_routes/settings_pages/models_settings
     backend/runtime:
         dir_name: 运行时执行与命令管理
@@ -380,8 +383,7 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: backend/app
+        related_to: []
     console:
         dir_name: QwenPaw桌面控制台
         title: QwenPaw桌面控制台
@@ -481,7 +483,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/agents/agent_core
     console/frontend_core/page_routes/agent_pages/agent_config:
         dir_name: 智能体配置管理页面
         title: 智能体配置管理页面
@@ -490,7 +493,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/agents/agent_core
     console/frontend_core/page_routes/agent_pages/agent_mcp:
         dir_name: MCP客户端管理页面
         title: MCP客户端管理页面
@@ -500,7 +504,7 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: backend/app/routers/mcp_integration
+            - path: backend/app/mcp
     console/frontend_core/page_routes/agent_pages/agent_skills:
         dir_name: 智能体技能管理页面
         title: 智能体技能管理页面
@@ -509,7 +513,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/agents/skill_system
     console/frontend_core/page_routes/agent_pages/agent_tools:
         dir_name: 智能体工具管理页面
         title: 智能体工具管理页面
@@ -519,7 +524,7 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: backend/app/routers/skills_tools
+            - path: backend/agents/tools
     console/frontend_core/page_routes/agent_pages/agent_workspace:
         dir_name: 智能体工作空间管理
         title: 智能体工作空间管理
@@ -528,7 +533,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/workspace
     console/frontend_core/page_routes/chat_page:
         dir_name: 聊天页面核心功能模块
         title: 聊天页面核心功能模块
@@ -547,7 +553,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/routers/development_features
     console/frontend_core/page_routes/control_pages:
         dir_name: 控制台核心管理页面
         title: 控制台核心管理页面
@@ -570,7 +577,7 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: backend/app/routers/communication_channels
+            - path: backend/app/channels
     console/frontend_core/page_routes/control_pages/cron_jobs:
         dir_name: 定时任务管理页面
         title: 定时任务管理页面
@@ -589,7 +596,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/crons
     console/frontend_core/page_routes/control_pages/sessions:
         dir_name: 会话管理页面
         title: 会话管理页面
@@ -598,7 +606,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/chats
     console/frontend_core/page_routes/inbox_page:
         dir_name: 收件箱页面
         title: 收件箱页面
@@ -646,7 +655,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/routers/agent_management
     console/frontend_core/page_routes/settings_pages/backups_settings:
         dir_name: 备份管理页面
         title: 备份管理页面
@@ -655,7 +665,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/routers/utilities
     console/frontend_core/page_routes/settings_pages/environments_settings:
         dir_name: 环境变量管理页面
         title: 环境变量管理页面
@@ -664,7 +675,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/routers/system_config
     console/frontend_core/page_routes/settings_pages/market_settings:
         dir_name: 市场设置页面
         title: 市场设置页面
@@ -673,7 +685,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/routers/market_plugins
     console/frontend_core/page_routes/settings_pages/models_settings:
         dir_name: 模型提供商配置管理
         title: 模型提供商配置管理
@@ -692,7 +705,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: plugins
     console/frontend_core/page_routes/settings_pages/security_settings:
         dir_name: 安全设置页面
         title: 安全设置页面
@@ -701,7 +715,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/routers/authentication_security
     console/frontend_core/page_routes/settings_pages/skill_pool_settings:
         dir_name: 技能池管理页面
         title: 技能池管理页面
@@ -710,7 +725,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/agents/skill_system
     console/frontend_core/page_routes/settings_pages/token_usage_settings:
         dir_name: 令牌使用情况分析页面
         title: 令牌使用情况分析页面
@@ -719,7 +735,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/routers/system_config
     console/frontend_core/page_routes/settings_pages/voice_transcription_settings:
         dir_name: 语音转录设置页面
         title: 语音转录设置页面
@@ -728,7 +745,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: backend/app/routers/communication_channels
     console/frontend_core/ui_components:
         dir_name: UI组件库
         title: UI组件库
@@ -746,8 +764,7 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: backend
+        related_to: []
     deploy:
         dir_name: 容器化部署配置
         title: 容器化部署配置
@@ -774,7 +791,8 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: console/frontend_core/page_routes/settings_pages/plugin_manager_settings
     scripts:
         dir_name: 构建与打包脚本模块
         title: 构建与打包脚本模块

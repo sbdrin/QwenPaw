@@ -5,5 +5,4 @@ scope:
     - src/qwenpaw/
 source_files: []
 depends_on: []
-related_to:
-    - path: console/tauri_backend
+related_to: []

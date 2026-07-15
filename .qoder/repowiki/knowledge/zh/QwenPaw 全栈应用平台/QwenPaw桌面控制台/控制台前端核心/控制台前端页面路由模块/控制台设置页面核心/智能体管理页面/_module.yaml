@@ -5,4 +5,5 @@ scope:
     - console/src/pages/Settings/Agents/
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: backend/app/routers/agent_management

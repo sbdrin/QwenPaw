@@ -5,4 +5,5 @@ scope:
     - console/src/pages/Agent/Skills/
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: backend/agents/skill_system

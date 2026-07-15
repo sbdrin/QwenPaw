@@ -7,4 +7,5 @@ scope:
     - src/qwenpaw/app/routers/loops.py
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: console/frontend_core/page_routes/coding_page

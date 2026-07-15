@@ -8,4 +8,5 @@ scope:
     - src/qwenpaw/app/routers/_backup_helpers.py
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: console/frontend_core/page_routes/settings_pages/backups_settings

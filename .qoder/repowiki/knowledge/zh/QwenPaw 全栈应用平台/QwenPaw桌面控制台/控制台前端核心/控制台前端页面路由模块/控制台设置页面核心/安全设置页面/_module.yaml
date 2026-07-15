@@ -5,4 +5,5 @@ scope:
     - console/src/pages/Settings/Security/
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: backend/app/routers/authentication_security

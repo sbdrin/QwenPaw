@@ -7,5 +7,4 @@ scope:
     - src/qwenpaw/app/routers/provider_oauth.py
 source_files: []
 depends_on: []
-related_to:
-    - path: console/frontend_core/page_routes/agent_pages/agent_mcp
+related_to: []
