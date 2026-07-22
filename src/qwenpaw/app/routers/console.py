@@ -148,6 +148,14 @@ def _extract_session_and_payload(request_data: Union[AgentRequest, dict]):
         "content_parts": content_parts,
         "meta": meta,
     }
+
+    if isinstance(request_data, AgentRequest):
+        mso = getattr(request_data, "model_slot_override", None)
+    else:
+        mso = request_data.get("model_slot_override")
+    if mso is not None:
+        native_payload["model_slot_override"] = mso
+
     return native_payload
 
 
@@ -546,6 +554,13 @@ async def post_console_chat_task(
     session_id = console_channel.resolve_session_id(
         sender_id=native_payload["sender_id"],
         channel_meta=native_payload["meta"],
+    )
+    name, _ = _extract_placeholder_name(native_payload["content_parts"])
+    await workspace.chat_manager.get_or_create_chat(
+        session_id,
+        native_payload["sender_id"],
+        native_payload["channel_id"],
+        name=name,
     )
 
     task_timeout: Optional[float] = None

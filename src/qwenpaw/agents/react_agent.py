@@ -44,6 +44,13 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 
 
+def _effective_artifact_retention_days(light_context_config: Any) -> int:
+    """Return the independently configured tool-result artifact lifetime."""
+    return (
+        light_context_config.tool_result_pruning_config.offload_retention_days
+    )
+
+
 class QwenPawAgent(CodingModeMixin, Agent):
     """QwenPaw Agent with integrated tools, skills, and memory management.
 
@@ -95,7 +102,6 @@ class QwenPawAgent(CodingModeMixin, Agent):
 
         self._governor = governor
         self._gate_pending_stop = None
-        self._gate_pending_continue = None
 
         self.memory_manager = memory_manager
 
@@ -325,10 +331,11 @@ class QwenPawAgent(CodingModeMixin, Agent):
         ):
             try:
                 lcc = self._agent_config.running.light_context_config
-                trc = lcc.tool_result_pruning_config
-                offloader.cleanup_expired(
-                    retention_days=trc.offload_retention_days,
-                )
+                retention_days = _effective_artifact_retention_days(lcc)
+                if retention_days > 0:
+                    offloader.cleanup_expired(
+                        retention_days=retention_days,
+                    )
             except Exception:
                 logger.debug("offloader cleanup failed", exc_info=True)
 
@@ -531,6 +538,9 @@ class QwenPawAgent(CodingModeMixin, Agent):
                 stop_result.continuation_message
                 or "Continue working on the task."
             )
+            continuation_metadata = stop_result.continuation_metadata or {
+                QWENPAW_MESSAGE_TAG_KEY: (LOOP_CONTINUATION_MESSAGE_TAG),
+            }
             self.state.context.append(
                 Msg(
                     name="user",
@@ -541,14 +551,12 @@ class QwenPawAgent(CodingModeMixin, Agent):
                             text=continuation,
                         ),
                     ],
-                    metadata={
-                        QWENPAW_MESSAGE_TAG_KEY: LOOP_CONTINUATION_MESSAGE_TAG,
-                    },
+                    metadata=continuation_metadata,
                 ),
             )
             return  # outer loop continues
 
-        yield final_msg
+        yield stop_result.final_message or final_msg
 
     @staticmethod
     def _is_content_safety_error(exc: Exception) -> bool:
